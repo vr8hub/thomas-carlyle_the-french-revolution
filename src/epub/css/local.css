@@ -16,19 +16,10 @@ span[epub|type~="subtitle"]{
 	hyphens: none;
 }
 
-[epub|type~="epigraph"] em,
-[epub|type~="epigraph"] i{
-	font-style: normal;
-}
-
 [epub|type~="epigraph"] cite{
 	margin-top: 1em;
 	font-style: normal;
 	font-variant: small-caps;
-}
-
-[epub|type~="epigraph"] cite i{
-	font-style: italic;
 }
 /* End all epigraphs */
 
@@ -45,13 +36,13 @@ section > header [epub|type~="epigraph"] + *{
 }
 
 @supports(display: table){
-	section > header [epub|type~="epigraph"]{
-		display: table;
-	}
+section > header [epub|type~="epigraph"]{
+	display: table;
+}
 }
 /* End epigraphs in section headers */
 
-
+/* poetry in an epigraph */
 [epub|type~="epigraph"] p > span{
 	display: block;
 	text-indent: -1em;
@@ -62,24 +53,7 @@ section > header [epub|type~="epigraph"] + *{
 	display: none;
 }
 
-[epub|type~="epigraph"] p + p{
-	margin-top: 1em;
-}
-
-[epub|type~="epigraph"] + p{
-	text-indent: 0;
-}
-
-p span.i1{
-	text-indent: -1em;
-	padding-left: 2em;
-}
-
-p span.i2{
-	text-indent: -1em;
-	padding-left: 3em;
-}
-
+/* poetry */
 [epub|type~="poem"] p > span{
 	display: block;
 	text-indent: -1em;
@@ -90,20 +64,6 @@ p span.i2{
 	display: none;
 }
 
-[epub|type~="poem"] p + p{
-	margin-top: 1em;
-}
-
 [epub|type~="poem"] + p{
 	text-indent: 0;
-}
-
-p span.i1{
-	text-indent: -1em;
-	padding-left: 2em;
-}
-
-p span.i2{
-	text-indent: -1em;
-	padding-left: 3em;
 }
