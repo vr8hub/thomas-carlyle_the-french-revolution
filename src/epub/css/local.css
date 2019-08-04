@@ -31,14 +31,10 @@ section > header [epub|type~="epigraph"]{
 	text-align: left;
 }
 
-section > header [epub|type~="epigraph"] + *{
-	margin-top: 3em;
-}
-
 @supports(display: table){
-section > header [epub|type~="epigraph"]{
+	section > header [epub|type~="epigraph"]{
 	display: table;
-}
+	}
 }
 /* End epigraphs in section headers */
 
@@ -66,4 +62,38 @@ section > header [epub|type~="epigraph"]{
 
 [epub|type~="poem"] + p{
 	text-indent: 0;
+}
+
+table.calendar{
+	border: 1px solid;
+	border-collapse: collapse;
+	margin: 1em;
+}
+
+table.calendar th{
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	font-weight: normal;
+	padding-left: .5em;
+	padding-right: 1em;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+table.calendar th:nth-child(even){
+	border-right: 1px solid;
+}
+
+table.calendar td{
+	padding-left: .5em;
+}
+
+table.calendar td:nth-child(even){
+	border-right: 1px solid;
+	padding: 0;
+	text-align: center;
+}
+
+table.calendar tr.quarter > td{
+	padding-bottom: .5em;
 }
